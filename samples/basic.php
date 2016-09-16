@@ -1,29 +1,86 @@
 <?php
+use comerciaConnect\Api;
+use comerciaConnect\logic\Product;
+use comerciaConnect\logic\ProductCategory;
+use comerciaConnect\logic\ProductDescription;
+use comerciaConnect\logic\Website;
+
 include_once("config.php");
 include_once("../api.php");
 
+class example
+{
+    function work()
+    {
 //setup session
-$api = new \ComerciaConnect\Api(API_AUTH_URL, API_URL);
-$session = $api->createSession(API_KEY);
+        $api = new Api(API_AUTH_URL, API_URL);
+        $session = $api->createSession(API_KEY);
 
 
 //get website information
-$website = \comerciaConnect\logic\Website::getWebsite($session, "mysite");
+        $website = Website::getWebsite($session, "mysite");
+
+
+        $category1=new ProductCategory($session);
+        $category1->name="hoi";
+        $category1->id=1;
+        $category1->save();
+
+
+        $category2=new ProductCategory($session);
+        $category2->name="doei";
+        $category2->id=2;
+        $category2->save();
 
 //add/update a product
-$product = new \comerciaConnect\logic\Product($session);
-$product->name = "lol";
-$product->quantity = 100;
-$product->price = 10.50;
-$product->url = "http://producturl.nl";
+        $product1 = new Product($session);
+        $product1->id = 1;
+        $product1->name = "lol";
+        $product1->quantity = 100;
+        $product1->price = 10.50;
+        $product1->url = "http://producturl.nl";
 
-$product->descriptions=array(
-    new \comerciaConnect\logic\ProductDescription("en-gb","lol","and a description"),
-    new \comerciaConnect\logic\ProductDescription("nl-nl","lol","en een description")
-);
+        $product1->descriptions = array(
+            new ProductDescription("en-gb", "lol", "and a description"),
+            new ProductDescription("nl-nl", "lol", "en een description")
+        );
+        $product1->categories=array($category1);
+        $product1->save();
 
+        //add/update a product
+        $product2 = new Product($session);
+        $product2->id = 2;
+        $product2->name = "productje";
+        $product2->quantity = 100;
+        $product2->price = 10.50;
+        $product2->url = "http://producturl.nl";
 
-$product->save();
+        $product2->descriptions = array(
+            new ProductDescription("en-gb", "lol", "and a description"),
+            new ProductDescription("nl-nl", "lol", "en een description")
+        );
+        $product2->categories=array($category2);
+        $product2->save();
+
+        //add/update a product
+        $product3 = new Product($session);
+        $product3->id = 3;
+        $product3->name = "en nog 1";
+        $product3->quantity = 100;
+        $product3->price = 10.50;
+        $product3->url = "http://producturl.nl";
+
+        $product3->descriptions = array(
+            new ProductDescription("en-gb", "lol", "and a description"),
+            new ProductDescription("nl-nl", "lol", "en een description")
+        );
+        $product3->categories=array($category1,$category2);
+        $product3->save();
+
+    }
+}
+
+(new example())->work();
 
 
 ?>

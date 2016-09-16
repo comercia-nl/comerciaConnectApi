@@ -7,6 +7,10 @@ class Product{
     var $price;
     var $url;
     var $descriptions;
+    var $categories;
+    var $ean;
+    var $isbn;
+    var $sku;
 
     private $session;
     function __construct($session)
