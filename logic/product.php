@@ -13,12 +13,50 @@ class Product{
     var $sku;
 
     private $session;
-    function __construct($session)
+    function __construct($session,$data=array())
     {
         $this->session=$session;
-    }
+        foreach($data as $key => $value){
+            $this->{$key} = $value;
+        }
+
+        $this->descriptions=array();
+        if(@$data["descriptions"]) {
+            foreach ($data["descriptions"] as $description) {
+                $this->descriptions[] = new ProductDescription($description);
+            }
+        }
+
+        $this->categories=array();
+        if(@$data["categories"]) {
+            foreach ($data["categories"] as $category) {
+                $this->descriptions[] = new ProductDescription($category);
+            }
+        }
+
+     }
 
     function save(){
         $this->session->post("product/save",$this);
     }
+
+    function delete(){
+        $this->session->get("product/delete/".$this->id);
+    }
+
+    static function getById($session,$id){
+        $data = $session->get("product/getById/".$id);
+        return new Product($session,$data["data"]);
+    }
+
+    static function getAll($session){
+        $data = $session->get("product/getAll");
+        $result=array();
+        foreach($data["data"] as $product){
+            $result[]=new Product($session,$product);
+        }
+        return $result;
+    }
+
+
 }

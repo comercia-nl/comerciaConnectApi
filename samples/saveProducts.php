@@ -16,11 +16,6 @@ class example
         $api = new Api(API_AUTH_URL, API_URL);
         $session = $api->createSession(API_KEY);
 
-
-//get website information
-        $website = Website::getWebsite($session, "mysite");
-
-
         $category1=new ProductCategory($session);
         $category1->name="hoi";
         $category1->id=1;
@@ -35,10 +30,14 @@ class example
 //add/update a product
         $product1 = new Product($session);
         $product1->id = 1;
-        $product1->name = "lol";
+        $product1->name = "Sword art online";
         $product1->quantity = 100;
         $product1->price = 10.50;
         $product1->url = "http://producturl.nl";
+        $product1->ean="3391891985772";
+        $product1->isbn="isb1234";
+        $product1->sku="123";
+
 
         $product1->descriptions = array(
             new ProductDescription("en-gb", "lol", "and a description"),
@@ -54,6 +53,9 @@ class example
         $product2->quantity = 100;
         $product2->price = 10.50;
         $product2->url = "http://producturl.nl";
+        $product2->ean="5055856411154";
+        $product2->isbn="isb1234";
+        $product2->sku="123";
 
         $product2->descriptions = array(
             new ProductDescription("en-gb", "lol", "and a description"),
@@ -69,6 +71,9 @@ class example
         $product3->quantity = 100;
         $product3->price = 10.50;
         $product3->url = "http://producturl.nl";
+        $product3->ean="3512899116573";
+        $product3->isbn="isbn123";
+        $product3->sku="123";
 
         $product3->descriptions = array(
             new ProductDescription("en-gb", "lol", "and a description"),
