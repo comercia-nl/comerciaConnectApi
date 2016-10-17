@@ -8,7 +8,7 @@ use comerciaConnect\logic\Website;
 include_once("config.php");
 include_once("../api.php");
 
-class example
+class Example
 {
     function work()
     {
@@ -85,7 +85,7 @@ class example
     }
 }
 
-(new example())->work();
+(new Example())->work();
 
 
 ?>
