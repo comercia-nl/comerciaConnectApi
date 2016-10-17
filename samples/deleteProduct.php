@@ -16,7 +16,7 @@ class Example
         $api = new Api(API_AUTH_URL, API_URL);
         $session = $api->createSession(API_KEY);
 
-        $product=Product::getById($session,1); //making a new instance with this a specific id works too.
+        $product=Product::getById($session,1); //create an instance with this a specific id works too.
         $product->delete();
     }
 }
