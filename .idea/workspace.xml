@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d06b50cb-7978-48e0-ab08-550e538e70b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/deleteProduct.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/saveProducts.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/websiteInformation.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/samples/basic.php" afterPath="$PROJECT_DIR$/samples/getProducts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/httpClient.php" afterPath="$PROJECT_DIR$/lib/httpClient.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/product.php" afterPath="$PROJECT_DIR$/logic/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/productCategory.php" afterPath="$PROJECT_DIR$/logic/productCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/productDescription.php" afterPath="$PROJECT_DIR$/logic/productDescription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic/website.php" afterPath="$PROJECT_DIR$/logic/website.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/config.php" afterPath="$PROJECT_DIR$/samples/config.php" />
     </list>
     <ignored path="comerciaConnectApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deleteProduct.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="deleteProduct.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/deleteProduct.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31173593">
+            <state vertical-scroll-proportion="-10.625">
               <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -137,6 +137,7 @@
         <option value="$PROJECT_DIR$/samples/getProducts.php" />
         <option value="$PROJECT_DIR$/samples/deleteProduct.php" />
         <option value="$PROJECT_DIR$/logic/product.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -326,10 +327,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="1027" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28221512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28221512" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -393,13 +394,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logic/productDescription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -775,8 +769,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/deleteProduct.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31173593">
+        <state vertical-scroll-proportion="-10.625">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
