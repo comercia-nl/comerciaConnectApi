@@ -40,8 +40,8 @@ class Example
 
 
         $product1->descriptions = array(
-            new ProductDescription("en-gb", "lol", "and a description"),
-            new ProductDescription("nl-nl", "lol", "en een description")
+            new ProductDescription("en-gb", "Product 1", "and a description"),
+            new ProductDescription("nl-nl", "Product 1", "en een omschrijving")
         );
         $product1->categories=array($category1);
         $product1->save();
@@ -58,8 +58,8 @@ class Example
         $product2->sku="123";
 
         $product2->descriptions = array(
-            new ProductDescription("en-gb", "lol", "and a description"),
-            new ProductDescription("nl-nl", "lol", "en een description")
+            new ProductDescription("en-gb", "Product 2", "and a description"),
+            new ProductDescription("nl-nl", "Product 2", "en een omschrijving")
         );
         $product2->categories=array($category2);
         $product2->save();
@@ -76,8 +76,8 @@ class Example
         $product3->sku="123";
 
         $product3->descriptions = array(
-            new ProductDescription("en-gb", "lol", "and a description"),
-            new ProductDescription("nl-nl", "lol", "en een description")
+            new ProductDescription("en-gb", "Product 3", "and a description"),
+            new ProductDescription("nl-nl", "Product 3", "en een omschrijving")
         );
         $product3->categories=array($category1,$category2);
         $product3->save();

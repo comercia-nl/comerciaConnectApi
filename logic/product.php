@@ -30,7 +30,7 @@ class Product{
         $this->categories=array();
         if(@$data["categories"]) {
             foreach ($data["categories"] as $category) {
-                $this->descriptions[] = new ProductDescription($category);
+                $this->categories[] = new productCategory($this->session,$category);
             }
         }
 
