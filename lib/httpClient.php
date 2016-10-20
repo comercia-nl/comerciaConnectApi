@@ -4,6 +4,7 @@ class HttpClient
 {
     function post($url, $data, $token = false)
     {
+        global $is_in_debug;
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -22,13 +23,14 @@ class HttpClient
 
         $server_output = curl_exec($ch);
         curl_close($ch);
-        print_r($server_output);
+        Debug::write($server_output);
         return json_decode($server_output, true);
 
     }
 
     function get($url, $token = false)
     {
+        global $is_in_debug;
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -42,9 +44,10 @@ class HttpClient
 
         $server_output = curl_exec($ch);
         curl_close($ch);
-        print_r($server_output);
+        Debug::write($server_output);
         return json_decode($server_output, true);
     }
+
 
 }
 
