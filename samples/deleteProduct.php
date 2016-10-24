@@ -1,9 +1,6 @@
 <?php
 use comerciaConnect\Api;
 use comerciaConnect\logic\Product;
-use comerciaConnect\logic\ProductCategory;
-use comerciaConnect\logic\ProductDescription;
-use comerciaConnect\logic\Website;
 
 include_once("config.php");
 include_once("../api.php");
