@@ -1,4 +1,5 @@
 <?php
+namespace comerciaConnect\lib;
     class Debug{
         static function write($message){
             global $is_in_debug;

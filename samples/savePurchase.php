@@ -53,9 +53,7 @@ class Example
 
             )
         );
-
         $purchase->save();
-
     }
 }
 
