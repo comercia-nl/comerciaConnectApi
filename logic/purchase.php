@@ -54,13 +54,11 @@ class Purchase{
         }
         return $result;
     }
-
-<<<<<<< HEAD
+    
     static function createFilter($session){
         return new PurchaseFilter($session);
     }
 
-=======
->>>>>>> 9d055f1c13c9b8562eaff670b00f3a31b8874ac1
+
 
 }
