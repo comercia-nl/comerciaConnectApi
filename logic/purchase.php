@@ -54,7 +54,7 @@ class Purchase{
         }
         return $result;
     }
-    
+
     static function createFilter($session){
         return new PurchaseFilter($session);
     }
