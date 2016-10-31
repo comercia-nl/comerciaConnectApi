@@ -59,4 +59,9 @@ class Product{
     }
 
 
+    static function createFilter($session){
+        return new ProductFilter($session);
+    }
+
+
 }
