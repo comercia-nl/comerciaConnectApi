@@ -23,6 +23,21 @@ class Example
             "tax" => 0.5,
         ));
 
+        $payment = new OrderLine(array(
+            "product" => Product::getById($session,4),
+            "price" => 10.50,
+            "quantity" => 5,
+            "tax" => 0.5,
+        ));
+
+        $shipping = new OrderLine(array(
+            "product" => Product::getById($session,5),
+            "price" => 10.50,
+            "quantity" => 5,
+            "tax" => 0.5,
+        ));
+
+
         $purchase = new Purchase(
             $session,
             array(
@@ -49,7 +64,7 @@ class Example
                     "province" => "drenthe",
                     "country" => "Netherlands"
                 ),
-                "orderLines"=>array($orderLine)
+                "orderLines"=>array($orderLine,$payment,$shipping)
 
             )
         );

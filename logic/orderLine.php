@@ -6,6 +6,7 @@ class OrderLine
     var $price;
     var $quantity;
     var $tax;
+    var $priceWithTax;
 
     function __construct($data)
     {

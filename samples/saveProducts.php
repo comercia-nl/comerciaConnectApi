@@ -36,6 +36,7 @@ class Example
         $product1->ean="3391891985772";
         $product1->isbn="isb1234";
         $product1->sku="123";
+        $product1->type=PRODUCT_TYPE_PRODUCT;
 
 
         $product1->descriptions = array(
@@ -55,6 +56,7 @@ class Example
         $product2->ean="5055856411154";
         $product2->isbn="isb1234";
         $product2->sku="123";
+        $product2->type=PRODUCT_TYPE_PRODUCT;
 
         $product2->descriptions = array(
             new ProductDescription("en-gb", "Product 2", "and a description"),
@@ -73,6 +75,7 @@ class Example
         $product3->ean="3512899116573";
         $product3->isbn="isbn123";
         $product3->sku="123";
+        $product3->type=PRODUCT_TYPE_PRODUCT;
 
         $product3->descriptions = array(
             new ProductDescription("en-gb", "Product 3", "and a description"),
@@ -80,6 +83,26 @@ class Example
         );
         $product3->categories=array($category1,$category2);
         $product3->save();
+
+
+        //add/update a product
+        $paymentMethod = new Product($session);
+        $paymentMethod->id = 4;
+        $paymentMethod->name = "invoice";
+        $paymentMethod->price = 10.50;
+        $paymentMethod->url = "http://producturl.nl";
+        $paymentMethod->type=PRODUCT_TYPE_PAYMENT;
+        $paymentMethod->save();
+
+
+        //add/update a product
+        $shippingMethod = new Product($session);
+        $shippingMethod->id = 5;
+        $shippingMethod->name = "postnl";
+        $shippingMethod->price = 10.50;
+        $shippingMethod->url = "http://www.postnl.nl";
+        $shippingMethod->type=PRODUCT_TYPE_SHIPPING;
+        $shippingMethod->save();
 
     }
 }

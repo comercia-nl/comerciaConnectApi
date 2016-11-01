@@ -2,15 +2,16 @@
 namespace comerciaConnect\logic;
 class Product{
     var $id;
-    var $name;
-    var $quantity;
-    var $price;
-    var $url;
-    var $descriptions;
-    var $categories;
-    var $ean;
-    var $isbn;
-    var $sku;
+    var $name="";
+    var $quantity=0;
+    var $price=0;
+    var $url="";
+    var $descriptions=array();
+    var $categories=array();
+    var $ean="";
+    var $isbn="";
+    var $sku="";
+    var $type=PRODUCT_TYPE_PRODUCT;
 
     private $session;
     function __construct($session,$data=array())
