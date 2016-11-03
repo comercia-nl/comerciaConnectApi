@@ -50,6 +50,8 @@ class Example
                 "id" => 1,
                 "date" => time(),
                 "status" => "processing",
+                "email"=>"info@comercia.nl",
+                "phonenumber"=>"0123456789",
                 "deliveryAddress" => array(
                     "firstName" => "Mark",
                     "lastName" => "Smit",

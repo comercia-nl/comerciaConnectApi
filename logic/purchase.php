@@ -12,6 +12,8 @@ class Purchase{
     var $deliveryAddress;
     var $invoiceAddress;
     var $orderLines;
+    var $phoneNumber;
+    var $email;
 
     private $session;
     function __construct($session,$data=array())
