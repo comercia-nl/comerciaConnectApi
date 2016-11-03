@@ -11,6 +11,7 @@ class Product{
     var $ean="";
     var $isbn="";
     var $sku="";
+    var $taxGroup="";
     var $type=PRODUCT_TYPE_PRODUCT;
 
     private $session;

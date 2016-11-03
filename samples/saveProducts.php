@@ -37,6 +37,7 @@ class Example
         $product1->isbn="isb1234";
         $product1->sku="123";
         $product1->type=PRODUCT_TYPE_PRODUCT;
+        $product1->taxGroup="21%";
 
 
         $product1->descriptions = array(
@@ -57,6 +58,7 @@ class Example
         $product2->isbn="isb1234";
         $product2->sku="123";
         $product2->type=PRODUCT_TYPE_PRODUCT;
+        $product2->taxGroup="21%";
 
         $product2->descriptions = array(
             new ProductDescription("en-gb", "Product 2", "and a description"),
@@ -76,6 +78,7 @@ class Example
         $product3->isbn="isbn123";
         $product3->sku="123";
         $product3->type=PRODUCT_TYPE_PRODUCT;
+        $product3->taxGroup="21%";
 
         $product3->descriptions = array(
             new ProductDescription("en-gb", "Product 3", "and a description"),
@@ -92,6 +95,7 @@ class Example
         $paymentMethod->price = 10.50;
         $paymentMethod->url = "http://producturl.nl";
         $paymentMethod->type=PRODUCT_TYPE_PAYMENT;
+        $product1->taxGroup="21%";
         $paymentMethod->save();
 
 
@@ -102,6 +106,7 @@ class Example
         $shippingMethod->price = 10.50;
         $shippingMethod->url = "http://www.postnl.nl";
         $shippingMethod->type=PRODUCT_TYPE_SHIPPING;
+        $product1->taxGroup="21%";
         $shippingMethod->save();
 
     }

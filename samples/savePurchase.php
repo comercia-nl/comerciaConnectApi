@@ -18,23 +18,29 @@ class Example
 
         $orderLine = new OrderLine(array(
             "product" => $product,
-            "price" => 10.50,
-            "quantity" => 5,
-            "tax" => 0.5,
+            "price" => 100,
+            "quantity" => 1,
+            "tax" => 21,
+            "priceWithTax"=>121,
+            "taxGroup"=>"21%"
         ));
 
         $payment = new OrderLine(array(
             "product" => Product::getById($session,4),
-            "price" => 10.50,
-            "quantity" => 5,
-            "tax" => 0.5,
+            "price" => 10,
+            "quantity" => 1,
+            "priceWithTax"=>12.1,
+            "tax" => 2.1,
+            "taxGroup"=>"21%"
         ));
 
         $shipping = new OrderLine(array(
             "product" => Product::getById($session,5),
-            "price" => 10.50,
-            "quantity" => 5,
-            "tax" => 0.5,
+            "price" => 10,
+            "quantity" => 1,
+            "priceWithTax"=>12.1,
+            "tax" => 2.1,
+            "taxGroup"=>"21%"
         ));
 
 
