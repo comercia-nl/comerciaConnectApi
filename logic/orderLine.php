@@ -14,6 +14,7 @@ class OrderLine
         foreach($data as $key => $value){
             $this->{$key} = $value;
         }
+ 	$this->product=new ProductFilter($data["product"]);
     }
 
 }

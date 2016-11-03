@@ -95,7 +95,8 @@ class Example
         $paymentMethod->price = 10.50;
         $paymentMethod->url = "http://producturl.nl";
         $paymentMethod->type=PRODUCT_TYPE_PAYMENT;
-        $product1->taxGroup="21%";
+        $paymentMethod->taxGroup="21%";
+	$paymentMethod->code="code";
         $paymentMethod->save();
 
 
@@ -106,7 +107,8 @@ class Example
         $shippingMethod->price = 10.50;
         $shippingMethod->url = "http://www.postnl.nl";
         $shippingMethod->type=PRODUCT_TYPE_SHIPPING;
-        $product1->taxGroup="21%";
+        $shippingMethod->taxGroup="21%";
+	$shippingMethod->code="code";
         $shippingMethod->save();
 
     }

@@ -13,6 +13,7 @@ class Product{
     var $sku="";
     var $taxGroup="";
     var $type=PRODUCT_TYPE_PRODUCT;
+    var $code="";
 
     private $session;
     function __construct($session,$data=array())
