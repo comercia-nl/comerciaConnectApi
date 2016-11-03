@@ -29,7 +29,7 @@ class Purchase{
         $this->orderLines=array();
         if(@$data["orderLines"]) {
             foreach ($data["orderLines"] as $orderLine) {
-                $this->orderLines[] = new OrderLine($orderLine);
+                $this->orderLines[] = new OrderLine($session,$orderLine);
             }
         }
 
