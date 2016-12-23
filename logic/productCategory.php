@@ -4,7 +4,7 @@ class ProductCategory
 {
     var $id;
     var $name;
-    var $lastUpdate;
+    var $lastUpdate=0;
 
     private $session;
 

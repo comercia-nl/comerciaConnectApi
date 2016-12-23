@@ -16,7 +16,7 @@ class Product{
     var $code="";
     var $image="";
     var $brand="";
-    var $lastUpdate;
+    var $lastUpdate=0;
 
     private $session;
     function __construct($session,$data=array())
