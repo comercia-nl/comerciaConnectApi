@@ -1,0 +1,36 @@
+<?php
+namespace comerciaConnect\logic;
+
+/**
+ * This class represents an address. It will only be used as part of an order. Adresses are not seperately usable.
+ * @author Mark Smit <m.smit@comercia.nl>
+ * @param array $data The data to initialize the address with
+ */
+class Address
+{
+    /** @var string */
+    var $firstName;
+    /** @var string */
+    var $lastName;
+    /** @var string */
+    var $street;
+    /** @var string */
+    var $number;
+    /** @var string */
+    var $suffix;
+    /** @var string */
+    var $postalCode;
+    /** @var string */
+    var $city;
+    /** @var string */
+    var $province;
+    /** @var string */
+    var $country;
+
+    function __construct($data)
+    {
+        foreach ($data as $key => $value) {
+            $this->{$key} = $value;
+        }
+    }
+}

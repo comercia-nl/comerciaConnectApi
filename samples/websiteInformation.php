@@ -3,7 +3,7 @@ use comerciaConnect\Api;
 use comerciaConnect\logic\Website;
 
 include_once("config.php");
-include_once("../api.php");
+include_once("../src/api.php")
 
 class Example
 {

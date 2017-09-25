@@ -4,7 +4,7 @@ use comerciaConnect\logic\Purchase;
 use comerciaConnect\logic\PurchaseFilter;
 
 include_once("config.php");
-include_once("../api.php");
+include_once("../src/api.php")
 
 class Example
 {
