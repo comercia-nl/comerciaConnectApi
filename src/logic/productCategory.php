@@ -2,7 +2,7 @@
 namespace comerciaConnect\logic;
 
 /**
- * This class represents a category which can contain categorys or subcategories
+ * This class represents a category which can contain categories or subcategories
  * @author Mark Smit <m.smit@comercia.nl>
  * @param array $data The data to initialize the address with
  * @param Session $session The session object to connect with Comercia Connect
@@ -76,7 +76,7 @@ class ProductCategory
     }
 
     /**
-     * maps the hyrarchy of categories.
+     * maps the hierarchy of categories.
      * @param Session $session
      * @param String[String]|Key value pairs of category id
      */
@@ -87,7 +87,7 @@ class ProductCategory
 
 
     /**
-     * Saves categorys in bulk
+     * Saves categories in bulk
      * @param Session $session
      * @param Category[] $data
      * @return bool Indicates if the category is successfully saved

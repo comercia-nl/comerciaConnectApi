@@ -2,7 +2,7 @@
 namespace comerciaConnect\logic;
 
 /**
- * This class represents an address. It will only be used as part of an order. Adresses are not seperately usable.
+ * This class represents an address. It will only be used as part of an order. addresses are not separately usable.
  * @author Mark Smit <m.smit@comercia.nl>
  * @param array $data The data to initialize the address with
  */

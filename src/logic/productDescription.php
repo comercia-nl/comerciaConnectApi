@@ -1,7 +1,7 @@
 <?php
 namespace comerciaConnect\logic;
 /**
- * This class represents a description. It will only be used as part of a product. Descriptions are not seperately usable.
+ * This class represents a description. It will only be used as part of a product. Descriptions are not separately usable.
  * @author Mark Smit <m.smit@comercia.nl>
  * @param array $data The data to initialize the address with
  */

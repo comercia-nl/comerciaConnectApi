@@ -51,7 +51,7 @@ class Api
     }
 
     /**
-     * Starts an api session,
+     * Starts an api session
      * @param string $key This is the api key from Comercia Connect
      * @return Session A new session
      */

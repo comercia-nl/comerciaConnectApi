@@ -17,13 +17,13 @@ class Website
     /** @var decimal[string|country][string|taxgroup] */
     var $taxRates;
     /**
-     * @var string[] | Iso 639-1  supporterd languages by the webshop
+     * @var string[] | Iso 639-1  supported languages by the webshop
      * @see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes For language code information
      */
     var $languages;
 
     /**
-     * @var string[] | ISO 4217 code  supporterd currencies by the webshop
+     * @var string[] | ISO 4217 code  supported currencies by the webshop
      * @see https://en.wikipedia.org/wiki/ISO_4217
      */
     var $currencies;

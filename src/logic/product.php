@@ -39,7 +39,7 @@ class Product
     var $image = "";
     /** @var string */
     var $brand = "";
-    /** @var Product | Used when the product is a subset of an other product */
+    /** @var Product | Used when the product is a subset of another product */
     var $parent = null;
     /** @var int | timestamp */
     var $lastUpdate = 0;
@@ -181,7 +181,7 @@ class Product
 
 
     /**
-     * Touches a product in comercia connect.. Used to tell Comercia connect that the client touched a product
+     * Touches a product in Comercia Connect.. Used to tell Comercia Connect that the client touched a product
      * @return bool Indicates if the product is successfully touched
      */
     function touch(){

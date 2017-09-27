@@ -48,7 +48,7 @@
                         $append[] = $copy;
                     }
 
-                    // Undo the side effecst of array_shift
+                    // Undo the side effects of array_shift
                     array_unshift($values, $product[$key]);
                 }
 

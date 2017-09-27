@@ -2,14 +2,14 @@
 namespace comerciaConnect\logic;
 
 /**
- * This class represents an orderline. It will only be used as part of an order. Orderlines are not seperately usable.
+ * This class represents an orderline. It will only be used as part of an order. Orderlines are not separately usable.
  * @author Mark Smit <m.smit@comercia.nl>
  * @param array $data The data to initialize the address with
  * @param Session $session The session object to connect with Comercia Connect
  */
 class OrderLine
 {
-    /** @var Product | Should contain an product which is already saved to comercia connect */
+    /** @var Product | Should contain an product which is already saved to Comercia Connect */
     var $product;
     /** @var decimal | Should contain the price excluding tax */
     var $price;

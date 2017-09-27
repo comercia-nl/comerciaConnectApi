@@ -1,7 +1,7 @@
 <?php
 namespace comerciaConnect\logic;
 /**
- * This class represents an order. It is called Purchase because order is a reserved keyword in some php versions.
+ * This class represents an order. It is named Purchase because order is a reserved keyword in some php versions.
  * @author Mark Smit <m.smit@comercia.nl>
  * @param Session $session The session object to connect with Comercia Connect
  * @param array $data The data to initialize the address with
@@ -89,7 +89,7 @@ class Purchase
     }
     
     /**
-     * Gets a order from Comercia Connect
+     * Gets an order from Comercia Connect
      * @param Session $session
      * @param string $id
      * @return Order
@@ -140,7 +140,7 @@ class Purchase
     }
 
     /**
-     * Changes the id of a order in Comercia Connect
+     * Changes the id of an order in Comercia Connect
      * @param string $id
      * @return bool Indicates if the order is successfully saved
      */
@@ -156,7 +156,7 @@ class Purchase
     }
 
     /**
-     * Touches a order in comercia connect.. Used to tell Comercia connect that the client touched a order
+     * Touches an order in Comercia Connect.. Used to tell Comercia Connect that the client touched a order
      * @return bool Indicates if the order is successfully touched
      */
     function touch(){
