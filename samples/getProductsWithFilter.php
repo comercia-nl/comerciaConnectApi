@@ -5,7 +5,7 @@ use comerciaConnect\logic\ProductCategory;
 use comerciaConnect\logic\ProductFilter;
 
 include_once("config.php");
-include_once("../src/api.php")
+include_once("../src/api.php");
 
 class Example
 {
