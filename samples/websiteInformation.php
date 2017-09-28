@@ -20,7 +20,7 @@ class Example
         print_r($website);
 
 
-        //create a link to the comercia connect control pannel without the need of logging in.
+        //create a link to the comercia connect control panel without the need of logging in.
         echo $website->controlPanelUrl();
 
     }
