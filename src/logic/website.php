@@ -4,8 +4,6 @@ namespace comerciaConnect\logic;
 /**
  * This class represents a Website. This contains all website related settings.
  * @author Mark Smit <m.smit@comercia.nl>
- * @param Session $session The session object to connect with Comercia Connect
- * @param array $data The data to initialize the address with
  */
 
 class Website
@@ -61,6 +59,10 @@ class Website
     private $session;
 
 
+    /**
+     * @param Session $session The session object to connect with Comercia Connect
+     * @param array $data The data to initialize the address with
+     */
     function __construct($session, $data = [])
     {
         $this->session = $session;

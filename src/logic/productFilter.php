@@ -3,7 +3,6 @@ namespace comerciaConnect\logic;
 /**
  * This class is used to do a filtered product request
  * @author Mark Smit <m.smit@comercia.nl>
- * @param Session $session The session object to connect with Comercia Connect
  */
 class ProductFilter
 {
@@ -11,6 +10,7 @@ class ProductFilter
     /** @var Filter[] */
     var $filters = [];
 
+    /** @param Session $session The session object to connect with Comercia Connect */
     function __construct($session)
     {
         $this->session = $session;

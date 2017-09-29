@@ -4,8 +4,6 @@ namespace comerciaConnect\logic;
 /**
  * This class represents a category which can contain categories or subcategories
  * @author Mark Smit <m.smit@comercia.nl>
- * @param array $data The data to initialize the address with
- * @param Session $session The session object to connect with Comercia Connect
  */
 class ProductCategory
 {
@@ -18,6 +16,10 @@ class ProductCategory
 
     private $session;
 
+
+    /** @param array $data The data to initialize the address with
+     * @param Session $session The session object to connect with Comercia Connect
+     */
     function __construct($session, $data = [])
     {
         $this->session = $session;
@@ -78,11 +80,12 @@ class ProductCategory
     /**
      * maps the hierarchy of categories.
      * @param Session $session
-     * @param String[String]|Key value pairs of category id
+     * @param String [String]|Key value pairs of category id
      */
-    static function updateStructure($session,$maps){
-        $requestData=["maps"=>$maps];
-        $session->post("productCategory/updateStructure",$requestData);
+    static function updateStructure($session, $maps)
+    {
+        $requestData = ["maps" => $maps];
+        $session->post("productCategory/updateStructure", $requestData);
     }
 
 
@@ -92,9 +95,10 @@ class ProductCategory
      * @param Category[] $data
      * @return bool Indicates if the category is successfully saved
      */
-    static function saveBatch($session,$data){
-        $requestData=["data"=>$data];
-        $session->post("productCategory/saveBatch",$requestData);
+    static function saveBatch($session, $data)
+    {
+        $requestData = ["data" => $data];
+        $session->post("productCategory/saveBatch", $requestData);
     }
 
 

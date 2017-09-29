@@ -5,8 +5,6 @@ use comerciaConnect\lib\HttpClient;
 /**
  * This class contains the connection with Comercia Connect
  * @author Mark Smit <m.smit@comercia.nl>
- * @param Api $api The api object used to start a session
- * @param String token The token from Comercia Connect
  */
 class Session
 {
@@ -16,6 +14,10 @@ class Session
     /** @var string */
     var $token;
 
+    /**
+     * @param Api $api The api object used to start a session
+     * @param String token The token from Comercia Connect
+     */
     function __construct($api, $token)
     {
         $this->token = $token;

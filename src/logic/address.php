@@ -4,7 +4,6 @@ namespace comerciaConnect\logic;
 /**
  * This class represents an address. It will only be used as part of an order. addresses are not separately usable.
  * @author Mark Smit <m.smit@comercia.nl>
- * @param array $data The data to initialize the address with
  */
 class Address
 {
@@ -27,6 +26,7 @@ class Address
     /** @var string */
     var $country;
 
+    /** @param array $data The data to initialize the address with */
     function __construct($data)
     {
         foreach ($data as $key => $value) {

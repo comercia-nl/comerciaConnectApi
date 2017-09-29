@@ -3,8 +3,6 @@ namespace comerciaConnect\logic;
 /**
  * This class represents an order. It is named Purchase because order is a reserved keyword in some php versions.
  * @author Mark Smit <m.smit@comercia.nl>
- * @param Session $session The session object to connect with Comercia Connect
- * @param array $data The data to initialize the address with
  */
 class Purchase
 {    /** @var string */
@@ -39,6 +37,10 @@ class Purchase
 
     private $session;
 
+    /**
+     * @param Session $session The session object to connect with Comercia Connect
+     * @param array $data The data to initialize the address with
+     */
     function __construct($session, $data = [])
     {
         $this->session = $session;

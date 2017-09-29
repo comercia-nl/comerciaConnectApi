@@ -3,8 +3,6 @@ namespace comerciaConnect\logic;
 /**
  * This class represents a product
  * @author Mark Smit <m.smit@comercia.nl>
- * @param array $data The data to initialize the address with
- * @param Session $session The session object to connect with Comercia Connect
  */
 class Product
 {
@@ -31,7 +29,7 @@ class Product
     /** @var string */
     var $taxGroup = "";
 
-        /** @var  string[] */
+    /** @var  ProductImage[] */
     var $extraImages=[];
 
     /** @var enum(PRODUCT_TYPE_PRODUCT,PRODUCT_TYPE_SERVICE,PRODUCT_TYPE_VIRTUAL,PRODUCT_TYPE_PAYMENT,PRODUCT_TYPE_SHIPPING ) */
@@ -60,6 +58,10 @@ class Product
 
     private $session;
 
+    /**
+     * @param array $data The data to initialize the address with
+     * @param Session $session The session object to connect with Comercia Connect
+     */
     function __construct($session, $data = [])
     {
         $this->session = $session;

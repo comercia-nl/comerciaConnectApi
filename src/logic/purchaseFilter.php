@@ -3,14 +3,14 @@ namespace comerciaConnect\logic;
 /**
  * This class is used to do a filtered purchase request
  * @author Mark Smit <m.smit@comercia.nl>
- * @param Session $session The session object to connect with Comercia Connect
+
  */
 class PurchaseFilter
 {
     private $session;
     /** @var Filter[] */
     var $filters = [];
-
+    /** @param Session $session The session object to connect with Comercia Connect */
     function __construct($session)
     {
         $this->session = $session;
