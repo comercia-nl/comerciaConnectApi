@@ -29,9 +29,12 @@ class Product
     /** @var string */
     var $sku = "";
     /** @var string */
-    var $taxGroup = ""
+    var $taxGroup = "";
 
-    /** @var enum(PRODUCT_TYPE_PRODUCT,PRODUCT_TYPE_SERVICE,PRODUCT_TYPE_VIRTUAL,PRODUCT_TYPE_PAYMENT,PRODUCT_TYPE_SHIPPING ) */;
+        /** @var  string[] */
+    var $extraImages=[];
+
+    /** @var enum(PRODUCT_TYPE_PRODUCT,PRODUCT_TYPE_SERVICE,PRODUCT_TYPE_VIRTUAL,PRODUCT_TYPE_PAYMENT,PRODUCT_TYPE_SHIPPING ) */
     var $type = PRODUCT_TYPE_PRODUCT;
     /** @var string | should be unique */
     var $code = "";
