@@ -1,5 +1,10 @@
 <?php
 namespace comerciaConnect\logic;
+
+use comercia\Util;
+use comerciaConnect\lib\HttpClient;
+use MongoDB\BSON\Binary;
+
 /**
  * This class represents a product
  * @author Mark Smit <m.smit@comercia.nl>
@@ -14,6 +19,8 @@ class Product
     var $quantity = 0;
     /** @var decimal */
     var $price = 0;
+    /** @var decimal */
+    var $specialPrice = 0;
     /** @var string */
     var $url = "";
     /** @var Description[] | Descriptions will be saved when the product is saved */
@@ -24,6 +31,10 @@ class Product
     var $ean = "";
     /** @var string */
     var $isbn = "";
+    /** @var string */
+    var $jan = "";
+    /** @var string */
+    var $upc = "";
     /** @var string */
     var $sku = "";
     /** @var string */
@@ -52,6 +63,18 @@ class Product
     var $inStockStatus;
     /** @var string | which status  Comercia Connect should give when the product is not in stock */
     var $noStockStatus;
+    /** @var boolean | Product status */
+    var $active;
+    /** @var float | Product height */
+    var $height;
+    /** @var float | Product width */
+    var $width;
+    /** @var float | Product length */
+    var $length;
+    /** @var float | Product weight */
+    var $weight;
+    /** @var boolean | Product uses stock */
+    var $usesStock;
 
     /** @var array | The original data from the client */
     var $originalData;
@@ -73,6 +96,13 @@ class Product
             $this->parent = new Product($session, $this->parent);
         }
         $data=(object)$data;
+        $this->extraImages = [];
+        if (!empty($data->extraImages)) {
+            foreach ($data->extraImages as $image) {
+                $this->extraImages[] = new ProductImage($image);
+            }
+        }
+
         $this->descriptions = [];
         if (!empty($data->descriptions)) {
             foreach ($data->descriptions as $description) {
@@ -175,6 +205,10 @@ class Product
      */
     function changeId($new)
     {
+        if ($new == $this->id) {
+            return true;
+        }
+
         if($this->session) {
             $data = $this->session->get('product/changeId/' . $this->id . '/' . $new);
             $this->id=$new;
@@ -206,7 +240,7 @@ class Product
      */
     static function saveBatch($session,$data){
         $requestData=["data"=>$data];
-        $session->post("product/saveBatch",$requestData);
+        return $session->post("product/saveBatch",$requestData);
     }
 
 
@@ -221,5 +255,34 @@ class Product
         $session->post("product/touchBatch",$requestData);
     }
 
+    /**
+     * Gets image
+     * @param String $url
+     * @return Binary Image data
+     */
+    function getImageData($url)
+    {
+        if(substr($url, 0, strlen($this->session->api->base_url)) == $this->session->api->base_url) {
+            $url = str_replace($this->session->api->base_url, '', $url);
+            $result = $this->session->get($url, false);
+        } else {
+            $client = new HttpClient();
+            $result = $client->get($url, false, false);
+        }
 
+        return $result;
+    }
+
+
+    /**
+     * Deactivates products in bulk
+     * @param Session $session
+     * @param int[] $data
+     * @return bool Indicates if the product is successfully deactivated
+     */
+    static function deactivateBatch($session, $data)
+    {
+        $requestData = ["deletedData" => $data];
+        return $session->post("product/deactivateBatch", $requestData);
+    }
 }

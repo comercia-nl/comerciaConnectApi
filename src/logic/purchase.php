@@ -148,6 +148,10 @@ class Purchase
      */
     function changeId($new)
     {
+        if ($new == $this->id) {
+            return true;
+        }
+        
         if($this->session) {
             $data = $this->session->get('purchase/changeId/' . $this->id . '/' . $new);
             $this->id=$new;
@@ -177,7 +181,7 @@ class Purchase
      */
     static function saveBatch($session,$data){
         $requestData=["data"=>$data];
-        $session->post("purchase/saveBatch",$requestData);
+        return $session->post("purchase/saveBatch",$requestData);
     }
 
     /**
